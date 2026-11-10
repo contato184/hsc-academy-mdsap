@@ -87,4 +87,4 @@ const ex=document.getElementById('exp');if(ex)ex.addEventListener('click',()=>{c
 const b=new Blob([out.join('\n')],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download="Minhas_anotacoes_RA_Modulo_2.txt";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)});
 const links=[...document.querySelectorAll('nav.toc a')];function on(){const y=scrollY+90;let c=links[0];links.forEach(a=>{const el=document.querySelector(a.getAttribute('href'));if(el&&el.offsetTop<=y)c=a});links.forEach(a=>a.classList.toggle('on',a===c))}addEventListener('scroll',on,{passive:true});on();
 function fit(){try{if(frameElement)frameElement.style.height=(document.documentElement.scrollHeight+4)+'px'}catch(e){}}if(window.ResizeObserver)new ResizeObserver(fit).observe(document.body);addEventListener('load',fit);setInterval(fit,1500);
-})();</script></body></html>
+})();</script></body></html><script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.min.js"></script>
